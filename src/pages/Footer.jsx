@@ -4,7 +4,7 @@ import logo2 from '../assets/logo2.png';
 
 const Footer = () => {
     return (
-        <footer className="bg-[#EEEEEE] pt-5 pb-5">
+        <footer className="bg-gradient-to-b from-white to-[#eeeeee]  pt-5 pb-5 font-primary">
             <div className="container mx-auto px-4">
                 <div className="flex flex-wrap justify-between">
                     {/* Logo Section */}
@@ -18,16 +18,16 @@ const Footer = () => {
                             <span className="block uppercase text-black text-sm font-semibold mb-4">Menu</span>
                             <ul className="list-none">
                                 <li>
-                                    <Link to='/#inicio' className="text-black hover:text-gray-700 font-semibold block pb-2 text-sm">Inicio</Link>
+                                    <Link to='/#inicio' className="text-black hover:text-[#134B70] font-semibold block pb-2 text-sm">Inicio</Link>
                                 </li>
                                 <li>
-                                    <Link to='/#nosotros' className="text-black hover:text-gray-700 font-semibold block pb-2 text-sm">Nosotros</Link>
+                                    <Link to='/#nosotros' className="text-black hover:text-[#134B70] font-semibold block pb-2 text-sm">Nosotros</Link>
                                 </li>
                                 <li>
-                                    <Link to='/catalog' className="text-black hover:text-gray-700 font-semibold block pb-2 text-sm">Catálogo</Link>
+                                    <Link to='/catalog' className="text-black hover:text-[#134B70] font-semibold block pb-2 text-sm">Catálogo</Link>
                                 </li>
                                 <li>
-                                    <Link to='/#contacto' className="text-black hover:text-gray-700 font-semibold block pb-2 text-sm">Contacto</Link>
+                                    <Link to='/#contacto' className="text-black hover:text-[#134B70] font-semibold block pb-2 text-sm">Contacto</Link>
                                 </li>
                             </ul>
                         </div>
@@ -37,10 +37,10 @@ const Footer = () => {
                             <span className="block uppercase text-black text-sm font-semibold mb-4">Otros recursos</span>
                             <ul className="list-none">
                                 <li>
-                                    <a href="https://creative-tim.com/terms?ref=njs-profile" className="text-black hover:text-gray-700 font-semibold block pb-2 text-sm">Términos &amp; Condiciones</a>
+                                    <a href="https://creative-tim.com/terms?ref=njs-profile" className="text-black hover:text-[#134B70] font-semibold block pb-2 text-sm">Términos &amp; Condiciones</a>
                                 </li>
                                 <li>
-                                    <a href="https://creative-tim.com/privacy?ref=njs-profile" className="text-black hover:text-gray-700 font-semibold block pb-2 text-sm">Políticas de Privacidad</a>
+                                    <a href="https://creative-tim.com/privacy?ref=njs-profile" className="text-black hover:text-[#134B70] font-semibold block pb-2 text-sm">Políticas de Privacidad</a>
                                 </li>
                             </ul>
                         </div>
@@ -52,7 +52,7 @@ const Footer = () => {
                     <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between">
                         <div className="text-sm text-black font-semibold text-center lg:text-left">
                             &copy; 2024
-                            <Link to="/" className="text-blue-500 hover:text-blue-300 ml-1">Agustin Villarroel</Link>
+                            <Link to="/" className="text-[#134B70] hover:text-white ml-1">Agustin Villarroel</Link>
                         </div>
                     </div>
                 </div>

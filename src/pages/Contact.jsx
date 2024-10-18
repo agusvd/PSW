@@ -33,7 +33,7 @@ export default function Contact() {
     };
 
     return (
-        <motion.section id="contact" className="shadow-md relative overflow-hidden pt-10 pb-10" ref={ref}>
+        <motion.section id="contact" className="relative overflow-hidden pt-10 pb-10" ref={ref}>
             <div className="relative z-10 flex flex-col md:flex-row justify-center items-center md:justify-normal md:items-center gap-8">
                 {/* Formulario de contacto */}
                 <motion.div 
@@ -43,7 +43,7 @@ export default function Contact() {
                 >
                     <form 
                         onSubmit={handleSubmit}
-                        className="flex flex-col gap-6 justify-center items-center w-[90%] md:w-[500px] p-8 bg-[#eeeeeeee] rounded-2xl shadow-lg backdrop-blur-md"
+                        className="flex flex-col gap-6 justify-center items-center w-[90%] md:w-[500px] p-8 bg-[#eeeeeeee]/50 rounded-2xl shadow-lg backdrop-blur-md"
                     >
                         <motion.div 
                             initial={{ opacity: 0, x: -100 }} 
@@ -58,21 +58,21 @@ export default function Contact() {
                             </p>
                         </motion.div>
                         
-                        <div className="grid grid-cols-2 gap-4 w-full">
+                        <div className="grid grid-cols-1 gap-4 w-full">
                             {/* Animación al hacer hover en los inputs */}
                             <motion.input 
                                 whileHover={{ scale: 1.05 }} 
                                 transition={{ duration: 0.3 }}
                                 placeholder="Nombre" 
                                 type="text" 
-                                className="py-3 px-4 border-b-2 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-lg"
+                                className="py-3 px-4 border-b-2 col-span-2 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-lg"
                             />
                             <motion.input 
                                 whileHover={{ scale: 1.05 }} 
                                 transition={{ duration: 0.3 }}
                                 placeholder="Apellido" 
                                 type="text" 
-                                className="py-3 px-4 border-b-2 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-lg"
+                                className="py-3 px-4 border-b-2 col-span-2 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-lg"
                             />
                             <motion.input 
                                 whileHover={{ scale: 1.05 }} 

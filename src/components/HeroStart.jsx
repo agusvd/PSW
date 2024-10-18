@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import Marquee from "./ui/marquee";
+import { useTranslation } from "react-i18next";
 
 // Productos
 const reviews = [
@@ -75,18 +76,16 @@ const ReviewCard = ({
 };
 
 export default function HeroStart() {
+    const { t, i18n } = useTranslation();
 
     return (
         <section id="home" className="flex flex-col gap-2 justify-center items-center pb-10">
             <div className="flex flex-col items-center justify-center gap-4 mx-6 sm:mx-0">
-                <span className="block mb-4 text-xl md:text-md text-[#508C9B] font-primary">
-                    Explorando lo mejor
-                </span>
-                <h3 className="text-3xl text-center md:text-5xl text-[#134B70] font-semibold font-secondary">
-                    Desde las profundidades de Magallanes al mundo
+                <h3 className="text-3xl text-center md:text-6xl text-[#134B70] font-primary sm:mx-10">
+                    {t('hero1')}
                 </h3>
                 <p className="text-base md:text-lg text-[#508C9B] my-4 md:my-6 font-primary">
-                    Conoce nuestros productos de alta calidad.
+                    
                 </p>
             </div>
             <div className="w-screen">

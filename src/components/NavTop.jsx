@@ -23,24 +23,24 @@ export default function NavTop() {
     const { t, i18n } = useTranslation();
     const location = useLocation();
     return (
-        <div className="flex justify-center items-center h-24 font-primary px-8 py-10 gap-10 mb-10">
+        <div className="bg-white flex justify-center items-center h-24 font-primary px-8 py-10 gap-10 mb-10">
             <div className="flex items-center justify-start w-full">
                 <div className="">
                     <Link to='/'><img src={logo} className="h-20" /></Link>
                 </div>
             </div>
             <div className="hidden sm:visible sm:flex gap-4 font-primary">
-                <Link to='/#home' className={`${location.pathname.includes('/') && location.hash.includes('#home') ? 'font-bold' : ''} text-black hover:text-[#134B70] transition-all duration-300 text-lg`}>
-                    Inicio
+                <Link to='/#home' className={`${location.pathname.includes('/') && location.hash.includes('#home') ? 'font-semibold text-[#134B70]' : 'text-black'} hover:text-[#134B70] transition-all duration-300 text-lg text-nowrap`}>
+                    {t('inicio')}
                 </Link>
-                <Link to='/#about' className={`${location.hash.includes('#about') ? 'font-bold' : ''} text-black hover:text-[#134B70] transition-all duration-300 text-lg`}>
-                    Nosotros
+                <Link to='/#about' className={`${location.hash.includes('#about') ? 'font-semibold text-[#134B70]' : 'text-black'}  hover:text-[#134B70] transition-all duration-300 text-lg text-nowrap `}>
+                    {t('nosotros')}
                 </Link>
-                <Link to='/contact' className={`${location.pathname.includes('/contact') ? 'font-bold' : ''} text-black hover:text-[#134B70] transition-all duration-300 text-lg`}>
-                    Contacto
+                <Link to='/contact' className={`${location.pathname.includes('/contact') ? 'font-semibold text-[#134B70]' : 'text-black'}  hover:text-[#134B70] transition-all duration-300 text-lg text-nowrap`}>
+                    {t('contacto')}
                 </Link>
-                <Link to='/catalog' className={`${location.pathname.includes('/catalog') ? 'font-bold' : ''} text-black hover:text-[#134B70] transition-all duration-300 text-lg`}>
-                    Catalogo
+                <Link to='/catalog' className={`${location.pathname.includes('/catalog') ? 'font-semibold text-[#134B70]' : 'text-black'} hover:text-[#134B70] transition-all duration-300 text-lg text-nowrap`}>
+                    {t('catalogo')}
                 </Link>
             </div>
 

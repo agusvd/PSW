@@ -37,7 +37,7 @@ export default function NavDock() {
     ];
 
     return (
-        <motion.div animate={isHidden ? "hidden" : "visible"} whileHover="visible" onFocusCapture={() => setIsHidden(false)} variants={{ hidden: { y: "85%", }, visible: { y: "0%", }, }} transition={{ duration: 0.3 }} className="fixed bottom-0 z-30 flex w-full justify-center pt-1 pb-1">
+        <motion.div animate={isHidden ? "hidden" : "visible"} whileHover="visible" onFocusCapture={() => setIsHidden(false)} variants={{ hidden: { y: "85%", }, visible: { y: "0%", }, }} transition={{ duration: 0.3 }} className="fixed bottom-0 z-30 flex right-0 left-0 justify-center pt-1 pb-1">
             <div className="absolute -top-2 left-1/2 -translate-x-1/2 h-1 w-24 bg-gray-300 rounded-full"></div>
             <TooltipProvider>
                 <Dock direction="middle" className="gap-8 bg-[#134B70]/60 text-[#EEEEEE] *:transition-colors *:duration-300 border-none ">

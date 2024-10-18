@@ -31,7 +31,7 @@ export default function About() {
         <motion.section id="about" className="" ref={ref}>
             <div id="about-section" className="flex flex-col md:flex-row items-center gap-12 p-12">
                 <motion.div
-                    className="md:w-1/2 text-[#134B70]"
+                    className="md:w-1/2 text-[#134B70] border-2 border-green-500"
                     initial={{ opacity: 0, x: -100 }}
                     animate={controlsText}
                     transition={{ duration: 0.8 }}>
@@ -45,7 +45,7 @@ export default function About() {
                     </p>
                 </motion.div>
                 <motion.div
-                    className="md:w-1/2"
+                    className="md:w-1/2 border-2 border-red-500"
                     initial={{ opacity: 0, x: 100, scale: 0.7, rotate: 5 }}
                     animate={controlsImage}
                     transition={{ duration: 0.8, type: "spring", bounce: 0.3 }}
@@ -61,7 +61,7 @@ export default function About() {
             {/* Objetivo Section */}
             <div id="objetivo-section" className="flex flex-col md:flex-row items-center gap-12">
                 <motion.div
-                    className="md:w-1/2 order-1 md:order-2 text-[#134B70]"
+                    className="md:w-1/2 order-1 md:order-2 text-[#134B70] border-2 border-green-500"
                     initial={{ opacity: 0, x: -100 }}
                     animate={controlsText}
                     transition={{ duration: 0.8 }}>
@@ -75,7 +75,7 @@ export default function About() {
                     </p>
                 </motion.div>
                 <motion.div
-                    className="md:w-1/2"
+                    className="md:w-1/2 border-2 border-red-500"
                     initial={{ opacity: 0, x: 100, scale: 0.7, rotate: 5 }}
                     animate={controlsImage}
                     transition={{ duration: 0.8, type: "spring", bounce: 0.3 }}

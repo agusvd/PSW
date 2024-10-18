@@ -8,7 +8,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				primary: ['Open Sans'],
+				primary: ['Raleway'],
 				secondary: ['Poppins']
 			},
 			borderRadius: {
