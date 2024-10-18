@@ -33,7 +33,7 @@ export default function Contact() {
     };
 
     return (
-        <motion.section id="contact" className="bg-none shadow-md relative overflow-hidden pt-10 pb-10" ref={ref}>
+        <motion.section id="contact" className="shadow-md relative overflow-hidden pt-10 pb-10" ref={ref}>
             <div className="relative z-10 flex flex-col md:flex-row justify-center items-center md:justify-normal md:items-center gap-8">
                 {/* Formulario de contacto */}
                 <motion.div 
@@ -43,7 +43,7 @@ export default function Contact() {
                 >
                     <form 
                         onSubmit={handleSubmit}
-                        className="flex flex-col gap-6 justify-center items-center w-[90%] md:w-[500px] p-8 bg-white rounded-2xl shadow-md backdrop-blur-md"
+                        className="flex flex-col gap-6 justify-center items-center w-[90%] md:w-[500px] p-8 bg-[#eeeeeeee] rounded-2xl shadow-lg backdrop-blur-md"
                     >
                         <motion.div 
                             initial={{ opacity: 0, x: -100 }} 

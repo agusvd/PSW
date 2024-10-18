@@ -7,7 +7,7 @@ import NavDock from '../components/NavDock'
 
 const Home = () => {
     return (
-        <div className='bg-[#eeeeee] flex flex-col gap-8'>
+        <div className='bg-white flex flex-col gap-8'>
             <NavTop />
             <HeroStart />
             <About />

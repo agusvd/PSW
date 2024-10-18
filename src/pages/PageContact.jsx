@@ -6,7 +6,7 @@ import Contact from './Contact'
 
 export default function PageContact() {
     return (
-        <div className='bg-[#eeeeee]'>
+        <div className='bg-white'>
             <NavTop/>
             <NavDock/>
             <Contact/>

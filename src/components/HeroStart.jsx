@@ -78,7 +78,7 @@ export default function HeroStart() {
 
     return (
         <section id="home" className="flex flex-col gap-2 justify-center items-center pb-10">
-            <div className="flex flex-col items-center justify-center gap-4">
+            <div className="flex flex-col items-center justify-center gap-4 mx-6 sm:mx-0">
                 <span className="block mb-4 text-xl md:text-md text-[#508C9B] font-primary">
                     Explorando lo mejor
                 </span>

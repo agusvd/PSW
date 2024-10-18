@@ -23,13 +23,13 @@ export default function NavTop() {
     const { t, i18n } = useTranslation();
     const location = useLocation();
     return (
-        <div className="flex justify-center items-center h-24 font-primary px-8 py-10 gap-10 bg-[#eeeeee] mb-10">
+        <div className="flex justify-center items-center h-24 font-primary px-8 py-10 gap-10 mb-10">
             <div className="flex items-center justify-start w-full">
                 <div className="">
                     <Link to='/'><img src={logo} className="h-20" /></Link>
                 </div>
             </div>
-            <div className="flex gap-4 font-primary">
+            <div className="hidden sm:visible sm:flex gap-4 font-primary">
                 <Link to='/#home' className={`${location.pathname.includes('/') && location.hash.includes('#home') ? 'font-bold' : ''} text-black hover:text-[#134B70] transition-all duration-300 text-lg`}>
                     Inicio
                 </Link>
@@ -48,7 +48,7 @@ export default function NavTop() {
             <div className="flex justify-end gap-5 items-center w-full">
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                        <Button className="bg-black border-none px-3 py-1 flex items-center gap-2 rounded transition-all hover:bg-[#134B70] text-white active:scale-95 font-primary">
+                        <Button className="hover:bg-black border-none px-3 py-1 flex items-center gap-2 rounded transition-all bg-[#134B70] text-white active:scale-95 font-primary">
                             {t('idioma')}<BiWorld size={30} />
                         </Button>
                     </DropdownMenuTrigger>
