@@ -28,7 +28,7 @@ export default function About() {
     }, [inView, controlsText, controlsImage]);
 
     return (
-        <motion.section id="about" className="bg-white p-2 rounded-t-3xl shadow-sm" ref={ref}>
+        <motion.section id="about" className="" ref={ref}>
             <div id="about-section" className="flex flex-col md:flex-row items-center gap-12 p-12">
                 <motion.div
                     className="md:w-1/2 text-[#134B70]"
