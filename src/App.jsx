@@ -3,7 +3,7 @@ import Home from "./pages/Home"
 import PageCatalog from "./pages/PageCatalog"
 import PageCentolla from "./pages/PageCentolla"
 import PageContact from "./pages/PageContact"
-import Error from "./pages/error"
+import Error from "./pages/Error"
 import PageAbout from "./pages/PageAbout"
 
 export default function App() {
