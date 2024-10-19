@@ -29,7 +29,7 @@ export default function NavDock() {
 
     const menu = [
         { url: "/#home", label: t("inicio") },
-        { url: "/#about", label: t("nosotros") },
+        { url: "/about", label: t("nosotros") },
         { url: "/contact", label: t("contacto") },
         { url: "/catalog", label: t("catalogo") },
     ];
@@ -38,7 +38,7 @@ export default function NavDock() {
         <motion.div animate={isHidden ? "visible" : "hidden"} whileHover="visible" onFocusCapture={() => setIsHidden(false)} variants={{ hidden: { y: "-100%", }, visible: { y: "0%", }, }} transition={{ duration: 0.3 }} className="fixed top-0 z-30 flex right-0 left-0 justify-center pt-1 pb-1">
             <div className="flex justify-around items-center px-4 py-2 rounded-xl gap-8 bg-[#134B70]/80 h-[50px] text-[#EEEEEE]  border-none">
                 {menu.map((item) => (
-                    <Link to={item.url} className="text-xl hover:text-[#134B70] duration-300 transition-all font-primary w-full text-nowrap">
+                    <Link to={item.url} className="text-xl hover:text-black duration-300 transition-all font-primary w-full text-nowrap">
                         {item.label}
                     </Link>
                 ))}

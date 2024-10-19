@@ -33,7 +33,7 @@ export default function NavTop() {
                 <Link to='/#home' className={`${location.pathname.includes('/') && location.hash.includes('#home') ? 'font-semibold text-[#134B70]' : 'text-black'} hover:text-[#134B70] transition-all duration-300 text-lg text-nowrap`}>
                     {t('inicio')}
                 </Link>
-                <Link to='/#about' className={`${location.hash.includes('#about') ? 'font-semibold text-[#134B70]' : 'text-black'}  hover:text-[#134B70] transition-all duration-300 text-lg text-nowrap `}>
+                <Link to='/about' className={`${location.pathname.includes('/about') ? 'font-semibold text-[#134B70]' : 'text-black'}  hover:text-[#134B70] transition-all duration-300 text-lg text-nowrap `}>
                     {t('nosotros')}
                 </Link>
                 <Link to='/contact' className={`${location.pathname.includes('/contact') ? 'font-semibold text-[#134B70]' : 'text-black'}  hover:text-[#134B70] transition-all duration-300 text-lg text-nowrap`}>

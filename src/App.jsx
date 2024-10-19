@@ -4,6 +4,7 @@ import PageCatalog from "./pages/PageCatalog"
 import PageCentolla from "./pages/PageCentolla"
 import PageContact from "./pages/PageContact"
 import Error from "./pages/error"
+import PageAbout from "./pages/PageAbout"
 
 export default function App() {
 
@@ -13,6 +14,7 @@ export default function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/catalog" element={<PageCatalog/>} />
         <Route path="/contact" element={<PageContact/>} />
+        <Route path="/about" element={<PageAbout/>}/>
         <Route path="/centolla" element={<PageCentolla/>}/>
         <Route path="/404" element={<Error />} />
         <Route path="*" element={<Navigate to="/404" />} />

@@ -10,7 +10,6 @@ const Home = () => {
         <div className='bg-white flex flex-col gap-8'>
             <NavTop />
             <HeroStart />
-            <About />
             <Footer />
             <NavDock />
         </div>
