@@ -3,7 +3,7 @@ import ProductPage from '../components/ProductPage';
 
 const PageCentolla = () => {
     const productName = "Centolla de Magallanes";
-    const scientificName = "Lithodes santolla"; // Nombre científico agregado
+    const scientificName = "Lithodes santolla";
     const productDescription = "Una joya gastronómica del extremo sur de Chile, conocida por su delicada y exquisita carne, ideal para platos gourmet.";
     const howItsObtained = "La centolla se captura en las costas de la región de Magallanes usando trampas especializadas que permiten una pesca sostenible.";
     

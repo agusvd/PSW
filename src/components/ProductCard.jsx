@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function ProductCard({ name, image, description, url, className }) {
+    const { t } = useTranslation();
     return (
         <Link to={`/${url}`} className={`${className} group relative block shadow-md rounded-md`}>
             <div className="relative h-[350px] sm:h-[450px]">
@@ -22,7 +24,7 @@ export default function ProductCard({ name, image, description, url, className }
                 <span
                     className="mt-3 inline-block bg-[#134B70] rounded-md font-primary px-5 py-3 text-xs font-medium  tracking-wide text-white "
                 >
-                    Información
+                    {t('buttoncatalog')}
                 </span>
             </div>
         </Link>

@@ -6,14 +6,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import {
-    Drawer,
-    DrawerContent,
-    DrawerDescription,
-    DrawerHeader,
-    DrawerTitle,
-    DrawerTrigger
-} from "../components/ui/drawer"
+import { Drawer, DrawerContent, DrawerDescription, DrawerHeader, DrawerTitle, DrawerTrigger } from "../components/ui/drawer"
 
 export default function NavTop() {
 
@@ -40,12 +33,12 @@ export default function NavTop() {
 
     return (
         <div className="flex justify-center items-center h-24 font-primary p-2 gap-10 sm:mb-10">
-            <div className="flex items-center justify-between w-full">
+            <div className="flex items-center justify-between md:mx-20 w-full">
                 {/* Logo */}
                 <div>
                     <Link to='/'><img src={logo} className="h-20" alt="Logo" /></Link>
                 </div>
-                {/* Links for larger screens */}
+                {/* menu grande */}
                 <div className="hidden sm:flex gap-4 font-primary">
                     <div className="flex space-x-1">
                         {tabs.map((tab) => (
