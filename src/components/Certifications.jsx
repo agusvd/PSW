@@ -1,8 +1,8 @@
 
 export default function Certifications() {
     const certifications = [
-        { name: "ISO 9001", img: "../src/assets/iso9001.png", description: "Gestión de calidad" },
-        { name: "HACCP", img: "../src/assets/haccp.png", description: "Control de peligros y puntos críticos" },
+        { name: "ISO 9001", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/ISO_9001-2015.svg/2240px-ISO_9001-2015.svg.png", description: "Gestión de calidad" },
+        { name: "HACCP", img: "https://www.adhesivos-orcajada.es/wp-content/uploads/2022/03/Sistema-HAPPCC.jpg", description: "Control de peligros y puntos críticos" },
     ]
 
     return (

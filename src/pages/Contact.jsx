@@ -34,10 +34,10 @@ export default function Contact() {
 
     return (
         <motion.section id="contact" className="relative overflow-hidden" ref={ref}>
-            <div className="relative z-10 flex flex-col md:flex-row justify-center items-center md:justify-between md:items-center gap-8 md:gap-0">
+            <div className="relative z-10 flex flex-col justify-center items-center">
                 {/* Formulario de contacto */}
                 <motion.div initial={{ opacity: 0, x: -100 }} animate={controlsForm} className="w-full md:w-1/2 flex justify-center items-center">
-                    <form onSubmit={handleSubmit} className="flex flex-col gap-6 justify-center items-center w-[90%] md:w-[500px] p-8">
+                    <form onSubmit={handleSubmit} className="flex flex-col gap-6 justify-center items-center w-[90%] md:w-[500px] p-8 bg-gray-100 rounded">
                         <motion.div initial={{ opacity: 0, x: -100 }} animate={controlsForm} className="w-full text-start">
                             <h2 className="text-3xl font-semibold text-[#134B70] mb-2">
                                 Contáctanos
@@ -59,13 +59,6 @@ export default function Contact() {
                             Enviar
                         </motion.button>
                     </form>
-                </motion.div>
-                {/* Imagen animada */}
-                <motion.div initial={{ opacity: 0, x: 100 }} animate={controlsImage} className="w-full md:w-1/2 overflow-hidden flex justify-center items-center">
-                    <img className="rounded-xl h-full w-full object-cover" src="https://images.unsplash.com/photo-1574781330855-d0db8cc6a79c?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Background" />
-                    <div className="absolute top-4 left-4 z-20">
-                        <motion.img src={logo} className="h-16" alt="Logo" whileHover={{ scale: 1.2, rotate: 360 }} transition={{ duration: 1 }} />
-                    </div>
                 </motion.div>
 
             </div>
