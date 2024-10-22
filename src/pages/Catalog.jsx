@@ -14,7 +14,7 @@ const productos = [
         name: "Centollón",
         image: "https://www.subpesca.cl/portal/616/articles-812_foto.jpg",
         description: "El centollón, un crustáceo robusto y delicioso, es perfecto para preparar platos elegantes y de alta cocina.",
-        url: 'centolla'
+        url: 'centollon'
     },
     {
         id: 3,
@@ -28,7 +28,7 @@ const productos = [
         name: "Ostión del Sur",
         image: "https://www.aqua.cl/wp-content/uploads/2022/02/Ostiones-2-Cr%C3%A9dito-Instituto-Milenio-SECOS-scaled.jpg",
         description: "Ostión del sur, un molusco delicado con una textura suave y un sabor sutil, ideal para disfrutar en su versión más fresca o en preparaciones gourmet.",
-        url: 'centolla'
+        url: 'ostion'
     },
     {
         id: 5,
@@ -49,7 +49,7 @@ const productos = [
         name: "Merluza Austral",
         image: "https://puromar.cl/wp-content/uploads/2024/09/merluza-asustral-venta-pescados-mariscos-concepcion-chiguayante-talcahuano-san-pedro-puromar.jpg",
         description: "La merluza austral, conocida por su versatilidad y carne magra, es ideal tanto para preparaciones sencillas como para platos más elaborados.",
-        url: 'centolla'
+        url: 'merluza-austral'
     }
 ];
 

@@ -8,7 +8,6 @@ export default function PageContact() {
     return (
         <div className='bg-white'>
             <NavTop/>
-            <NavDock/>
             <Contact/>
             <Footer/>
         </div>

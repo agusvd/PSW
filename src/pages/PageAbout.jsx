@@ -9,7 +9,6 @@ export default function PageAbout() {
     return (
         <div className='bg-white'>
             <NavTop/>
-            <NavDock/>
             <About/>
             <Footer/>
         </div>

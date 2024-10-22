@@ -11,7 +11,6 @@ const Home = () => {
             <NavTop />
             <HeroStart />
             <Footer />
-            <NavDock />
         </div>
     )
 }

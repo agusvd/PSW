@@ -7,7 +7,6 @@ export default function PageCatalog() {
     return (
         <div className='bg-white flex flex-col gap-8'>
             <NavTop />
-            <NavDock/>
             <Catalog />
             <Footer />
         </div>
