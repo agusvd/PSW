@@ -8,20 +8,14 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import {
     Drawer,
-    DrawerClose,
     DrawerContent,
     DrawerDescription,
-    DrawerFooter,
     DrawerHeader,
     DrawerTitle,
     DrawerTrigger
 } from "../components/ui/drawer"
 
 export default function NavTop() {
-    const languages = [
-        { code: "es", lang: "Spanish" },
-        { code: "en", lang: "English" }
-    ];
 
     const { t, i18n } = useTranslation();
     const location = useLocation();
@@ -29,6 +23,11 @@ export default function NavTop() {
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
     };
+
+    const languages = [
+        { code: "es", lang: t('español') },
+        { code: "en", lang: t('ingles') }
+    ];
 
     const tabs = [
         { id: '/', label: t('inicio') },
@@ -56,7 +55,7 @@ export default function NavTop() {
                                     style={{ WebkitTapHighlightColor: "transparent" }}>
                                     {activeTab === tab.id && (
                                         <motion.span layoutId="bubble"
-                                            className="absolute inset-0 z-10 bg-[#134B70] rounded-xl"
+                                            className="absolute inset-0 z-10 bg-[#134B70] rounded-full"
                                             transition={{ type: "spring", bounce: 0.2, duration: 0.6 }} />
                                     )}
                                     <span className="relative z-20">{tab.label}</span>
@@ -66,30 +65,49 @@ export default function NavTop() {
                     </div>
                 </div>
                 <div className="flex items-center gap-2">
-                    {/* Buttom Menu */}
+                    {/* Language */}
+                    <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                            <Button className="group bg-gray-200 hover:bg-[#134B70] border-none px-3 py-1 flex items-center gap-2 rounded transition-all duration-300 ease-in-out  text-black hover:text-white active:scale-95">
+                                <span className="hidden sm:inline">{t('idioma')}</span>
+                                <BiWorld className="text-black group-hover:text-white transition-all duration-300 ease-in-out " size={30} />
+                            </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent>
+                            {languages.map((lng) => (
+                                <DropdownMenuItem
+                                    className={`${lng.code === i18n.language ? "font-bold bg-gray-200" : ""}`}
+                                    key={lng.code}
+                                    onClick={() => changeLanguage(lng.code)}>
+                                    {lng.lang}
+                                </DropdownMenuItem>
+                            ))}
+                        </DropdownMenuContent>
+                    </DropdownMenu>
+                    {/* Mobile Menu */}
                     <div className="sm:hidden">
                         <Drawer>
                             <DrawerTrigger asChild>
-                                <Button variant="outline">Menu</Button>
+                                <Button className="bg-[#134B70] rounded text-xl">Menu</Button>
                             </DrawerTrigger>
                             <DrawerContent>
                                 <DrawerHeader>
-                                    <DrawerTitle>Menu</DrawerTitle>
+                                    <DrawerTitle className="text-2xl">Menu</DrawerTitle>
                                     <DrawerDescription>Patagonia South West Eirl</DrawerDescription>
                                 </DrawerHeader>
-                                <div className="flex justify-around pt-4 pb-4 items-center space-y-1">
+                                <div className="flex justify-around pt-2 pb-2 items-center space-y-1">
                                     {tabs.map((tab) => (
                                         <Link to={tab.id} key={tab.id}>
                                             <button
                                                 onClick={() => setActiveTab(tab.id)}
-                                                className={`relative rounded-full px-3 py-1.5 text-md ${activeTab === tab.id ? "text-white" : "text-gray-500 hover:text-[#134B70]"
+                                                className={`relative rounded px-3 py-1.5 text-md ${activeTab === tab.id ? "text-white" : "text-gray-500 hover:text-[#134B70]"
                                                     } transition-all duration-300`}
                                                 style={{ WebkitTapHighlightColor: "transparent" }}
                                             >
                                                 {activeTab === tab.id && (
                                                     <motion.span
                                                         layoutId="bubble"
-                                                        className="absolute inset-0 z-10 bg-[#134B70] rounded-xl"
+                                                        className="absolute inset-0 z-10 bg-[#134B70] rounded text-lg"
                                                         transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                                                     />
                                                 )}
@@ -98,29 +116,22 @@ export default function NavTop() {
                                         </Link>
                                     ))}
                                 </div>
+                                <DrawerHeader>
+                                    <DrawerTitle className="text-xl">{t('idioma')}</DrawerTitle>
+                                </DrawerHeader>
+                                <div className="flex justify-center gap-4 items-center pt-2 pb-2">
+                                    {languages.map((lng) => (
+                                        <button className={`${lng.code === i18n.language ? "bg-[#134B70] text-white" : " text-gray-500"} text-lg rounded p-2`}
+                                            key={lng.code}
+                                            onClick={() => changeLanguage(lng.code)}
+                                        >
+                                            {lng.lang}
+                                        </button>
+                                    ))}
+                                </div>
                             </DrawerContent>
                         </Drawer>
                     </div>
-                    {/* Buttom Language */}
-                    <DropdownMenu>
-                        <DropdownMenuTrigger asChild>
-                            <Button className="hover:bg-black border-none px-3 py-1 flex items-center gap-2 rounded transition-all bg-[#134B70] text-white active:scale-95 font-primary">
-                                <span className="hidden sm:inline">{t('idioma')}</span> {/* Oculto en mobile, visible en pantallas >= sm */}
-                                <BiWorld size={30} /> {/* Ícono siempre visible */}
-                            </Button>
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent>
-                            {languages.map((lng) => (
-                                <DropdownMenuItem
-                                    className={`${lng.code === i18n.language ? "font-bold bg-gray-200" : ""}`}
-                                    key={lng.code}
-                                    onClick={() => changeLanguage(lng.code)}
-                                >
-                                    {lng.lang}
-                                </DropdownMenuItem>
-                            ))}
-                        </DropdownMenuContent>
-                    </DropdownMenu>
                 </div>
 
             </div>

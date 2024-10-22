@@ -4,56 +4,68 @@ import logo2 from '../assets/logo2.png';
 
 const Footer = () => {
     return (
-        <footer className="bg-gradient-to-b from-white to-[#eeeeee]  pt-5 pb-5 font-primary">
+        <footer className="bg-gradient-to-b from-white to-[#eeeeee] pt-8 pb-6 font-primary">
             <div className="container mx-auto px-4">
-                <div className="flex flex-wrap justify-between">
-                    {/* Logo Section */}
-                    <div className="w-full lg:w-6/12 flex flex-col items-center lg:items-start mb-6 lg:mb-0">
-                        <img src={logo2} className="h-24 lg:h-32" alt="Logo" />
+                {/* Logo y Menú: Ordenados verticalmente en móvil */}
+                <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-8 mb-6">
+                    {/* Logo */}
+                    <div className="w-full lg:w-1/2 text-center lg:text-left">
+                        <img src={logo2} className="h-24 lg:h-32 mx-auto lg:mx-0" alt="Logo" />
                     </div>
 
-                    {/* Menu Section */}
-                    <div className="w-full lg:w-6/12 flex flex-col lg:flex-row justify-around">
-                        <div className="mb-6 lg:mb-0">
-                            <span className="block uppercase text-black text-sm font-semibold mb-4">Menu</span>
-                            <ul className="list-none">
-                                <li>
-                                    <Link to='/#inicio' className="text-black hover:text-[#134B70] font-semibold block pb-2 text-sm">Inicio</Link>
-                                </li>
-                                <li>
-                                    <Link to='/#nosotros' className="text-black hover:text-[#134B70] font-semibold block pb-2 text-sm">Nosotros</Link>
-                                </li>
-                                <li>
-                                    <Link to='/catalog' className="text-black hover:text-[#134B70] font-semibold block pb-2 text-sm">Catálogo</Link>
-                                </li>
-                                <li>
-                                    <Link to='/#contacto' className="text-black hover:text-[#134B70] font-semibold block pb-2 text-sm">Contacto</Link>
-                                </li>
+                    {/* Menús */}
+                    <div className="w-full lg:w-1/2 flex flex-col lg:flex-row justify-around items-center lg:items-start gap-8">
+                        {/* Menú Principal */}
+                        <div>
+                            <h3 className="uppercase text-black text-sm font-semibold mb-4">Menú</h3>
+                            <ul className="list-none space-y-2">
+                                {['Inicio', 'Nosotros', 'Catálogo', 'Contacto'].map((item, index) => (
+                                    <li key={index}>
+                                        <Link
+                                            to={`/#${item.toLowerCase()}`}
+                                            className="text-black hover:text-[#134B70] font-semibold block text-sm"
+                                        >
+                                            {item}
+                                        </Link>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
 
-                        {/* Additional Resources */}
+                        {/* Recursos Adicionales */}
                         <div>
-                            <span className="block uppercase text-black text-sm font-semibold mb-4">Otros recursos</span>
-                            <ul className="list-none">
+                            <h3 className="uppercase text-black text-sm font-semibold mb-4">Otros recursos</h3>
+                            <ul className="list-none space-y-2">
                                 <li>
-                                    <a href="https://creative-tim.com/terms?ref=njs-profile" className="text-black hover:text-[#134B70] font-semibold block pb-2 text-sm">Términos &amp; Condiciones</a>
+                                    <a
+                                        href="https://creative-tim.com/terms?ref=njs-profile"
+                                        className="text-black hover:text-[#134B70] font-semibold block text-sm"
+                                    >
+                                        Términos & Condiciones
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="https://creative-tim.com/privacy?ref=njs-profile" className="text-black hover:text-[#134B70] font-semibold block pb-2 text-sm">Políticas de Privacidad</a>
+                                    <a
+                                        href="https://creative-tim.com/privacy?ref=njs-profile"
+                                        className="text-black hover:text-[#134B70] font-semibold block text-sm"
+                                    >
+                                        Políticas de Privacidad
+                                    </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                {/* Footer Bottom Section */}
+                {/* Sección Inferior */}
                 <div className="border-t border-gray-300 mt-6 pt-4">
-                    <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between">
-                        <div className="text-sm text-black font-semibold text-center lg:text-left">
+                    <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
+                        <p className="text-sm text-black font-semibold text-center">
                             &copy; 2024
-                            <Link to="/" className="text-[#134B70] hover:text-white ml-1">Agustin Villarroel</Link>
-                        </div>
+                            <Link to="/" className="text-[#134B70] hover:text-white ml-1">
+                                Agustin Villarroel
+                            </Link>
+                        </p>
                     </div>
                 </div>
             </div>

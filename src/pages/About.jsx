@@ -1,24 +1,20 @@
 import { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { useInView } from 'react-intersection-observer';
+import { useInView } from "react-intersection-observer";
 
 export default function About() {
-
     const controlsText = useAnimation();
     const controlsImage = useAnimation();
-    const { ref, inView } = useInView({
-        threshold: 0.2,
-    });
+    const { ref, inView } = useInView({ threshold: 0.2 });
+
     useEffect(() => {
         if (inView) {
             controlsText.start({
-                opacity: 1,
-                x: 0,
+                opacity: 1, x: 0, 
                 transition: { duration: 0.8, type: "spring", bounce: 0.3 },
             });
             controlsImage.start({
-                opacity: 1,
-                x: 0,
+                opacity: 1, x: 0, 
                 transition: { duration: 0.8, type: "spring", bounce: 0.3, delay: 0.2 },
             });
         } else {
@@ -28,61 +24,82 @@ export default function About() {
     }, [inView, controlsText, controlsImage]);
 
     return (
-        <motion.section id="about" className="" ref={ref}>
-            <div id="about-section" className="flex flex-col md:flex-row items-center gap-12 p-12">
-                <motion.div
-                    className="md:w-1/2 text-[#134B70] border-2 border-green-500"
-                    initial={{ opacity: 0, x: -100 }}
-                    animate={controlsText}
-                    transition={{ duration: 0.8 }}>
-                    <h2 className="text-5xl font-secondary font-bold mb-4">Patagonia South West Eirl</h2>
-                    <p className="text-[#508C9B] text-lg text-start font-primary">
-                        Nuestra empresa, Comercial Patagonia South West Eirl, se dedica
-                        principalmente a la elaboración, comercialización y exportación de
-                        productos del mar provenientes de la región de Magallanes. Fundada
-                        en 2008 en Punta Arenas por Rodrigo Castillo Mansilla, quien ha
-                        adquirido vasta experiencia en el rubro desde 1999.
-                    </p>
-                </motion.div>
-                <motion.div
-                    className="md:w-1/2 border-2 border-red-500"
-                    initial={{ opacity: 0, x: 100, scale: 0.7, rotate: 5 }}
-                    animate={controlsImage}
-                    transition={{ duration: 0.8, type: "spring", bounce: 0.3 }}
-                    whileHover={{ scale: 0.95, rotate: 0 }}>
-                    <img
-                        src="https://images.unsplash.com/photo-1574781330855-d0db8cc6a79c?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="Acerca de Magallánica"
+        <motion.section id="about" ref={ref} className="px-6 py-12">
+            <div className="container mx-auto flex flex-col gap-16">
+                {/* Sección Empresa */}
+                <div className="flex flex-col md:flex-row items-center gap-12">
+                    <motion.div
+                        className="md:w-1/2 text-[#134B70]"
+                        initial={{ opacity: 0, x: -100 }}
+                        animate={controlsText}
+                    >
+                        <h2 className="text-4xl md:text-5xl font-secondary font-bold mb-4">
+                            Patagonia South West Eirl
+                        </h2>
+                        <p className="text-lg text-[#508C9B] font-primary">
+                            Comercial Patagonia South West Eirl se dedica a la elaboración,
+                            comercialización y exportación de productos del mar desde la
+                            región de Magallanes. Fundada en 2008 en Punta Arenas por Rodrigo
+                            Castillo Mansilla, quien ha trabajado en la industria desde 1999.
+                        </p>
+                    </motion.div>
+                    <motion.div
+                        className="md:w-1/2"
+                        initial={{ opacity: 0, x: 100, scale: 0.7, rotate: 5 }}
+                        animate={controlsImage}
+                        whileHover={{ scale: 0.95, rotate: 0 }}
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1574781330855-d0db8cc6a79c?q=80&w=2970"
+                            alt="Productos del mar"
+                            className="rounded-lg shadow-lg"
+                        />
+                    </motion.div>
+                </div>
+
+                {/* Sección Objetivo */}
+                <div className="flex flex-col-reverse md:flex-row items-center gap-12">
+                    <motion.div
+                        className="md:w-1/2 text-[#134B70]"
+                        initial={{ opacity: 0, x: -100 }}
+                        animate={controlsText}
+                    >
+                        <h2 className="text-4xl md:text-5xl font-bold mb-4 font-secondary">
+                            Objetivo
+                        </h2>
+                        <p className="text-lg text-[#508C9B] font-primary">
+                            Nos enfocamos en elaborar productos de alta calidad para mercados
+                            en Europa, Estados Unidos, Japón, Corea del Sur y China,
+                            garantizando certificaciones y supervisando cada etapa del proceso
+                            en las plantas pesqueras de Magallanes.
+                        </p>
+                    </motion.div>
+                    <motion.div
+                        className="md:w-1/2"
+                        initial={{ opacity: 0, x: 100, scale: 0.7, rotate: 5 }}
+                        animate={controlsImage}
+                        whileHover={{ scale: 0.9, rotate: 0 }}
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1606756790138-261d2b21cd75?q=80&w=2865"
+                            alt="Objetivo de la empresa"
+                            className="rounded-lg shadow-lg"
+                        />
+                    </motion.div>
+                </div>
+
+                {/* Mapa de Google Maps */}
+                <div className="w-full h-96">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.2587123780515!2d-70.91001758466722!3d-53.163832179927554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbcdee3d09b3de66b%3A0x7461d3f66f8dd7cf!2sPunta%20Arenas%2C%20Regi%C3%B3n%20de%20Magallanes%20y%20de%20la%20Ant%C3%A1rtica%20Chilena%2C%20Chile!5e0!3m2!1ses!2sus!4v1698010250738!5m2!1ses!2sus"
+                        width="100%"
+                        height="100%"
+                        allowFullScreen=""
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
                         className="rounded-lg shadow-lg"
                     />
-                </motion.div>
-            </div>
-
-            {/* Objetivo Section */}
-            <div id="objetivo-section" className="flex flex-col md:flex-row items-center gap-12">
-                <motion.div
-                    className="md:w-1/2 order-1 md:order-2 text-[#134B70] border-2 border-green-500"
-                    initial={{ opacity: 0, x: -100 }}
-                    animate={controlsText}
-                    transition={{ duration: 0.8 }}>
-                    <h2 className="text-5xl font-bold mb-4 font-secondary">Objetivo</h2>
-                    <p className="text-[#508C9B] text-lg text-start font-primary">
-                        Elaborar productos de alta calidad para los mercados de Europa,
-                        Estados Unidos, Japón, Corea del Sur y China, siempre cumpliendo
-                        con las exigencias de certificación. Supervisamos cada etapa del
-                        proceso en las plantas pesqueras de Magallanes para asegurar la
-                        seguridad y calidad que nuestros clientes esperan.
-                    </p>
-                </motion.div>
-                <motion.div
-                    className="md:w-1/2 border-2 border-red-500"
-                    initial={{ opacity: 0, x: 100, scale: 0.7, rotate: 5 }}
-                    animate={controlsImage}
-                    transition={{ duration: 0.8, type: "spring", bounce: 0.3 }}
-                    whileHover={{ scale: 0.9, rotate: 0 }}
-                >
-                    <img src="https://images.unsplash.com/photo-1606756790138-261d2b21cd75?q=80&w=2865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Objetivo Magallánica" className="rounded-lg shadow-lg" />
-                </motion.div>
+                </div>
             </div>
         </motion.section>
     );

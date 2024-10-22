@@ -81,21 +81,18 @@ export default function HeroStart() {
     return (
         <section id="home" className="flex flex-col gap-2 justify-center items-center pb-10">
             <div className="flex flex-col items-center justify-center gap-4 mx-6 sm:mx-0">
-                <h3 className="text-3xl text-center md:text-6xl text-[#134B70] font-primary sm:mx-10">
+                <h3 className="text-3xl text-center md:text-6xl text-[#134B70] font-primary sm:mx-10 md:mx-[60px] lg:mx-[80px] xl:mx-[100px] 2xl:mx-[200px] md:pb-16 lg:pb-24">
                     {t('hero1')}
                 </h3>
-                <p className="text-base md:text-lg text-[#508C9B] my-4 md:my-6 font-primary">
-                    
-                </p>
             </div>
             <div className="w-screen">
                 <div className="relative flex flex-col items-center justify-center overflow-hidden">
-                    <Marquee pauseOnHover className="[--duration:20s]">
+                    <Marquee pauseOnHover className="[--duration:30s]">
                         {firstRow.map((review) => (
                             <ReviewCard key={review.id} {...review} />
                         ))}
                     </Marquee>
-                    <Marquee reverse pauseOnHover className="[--duration:20s]">
+                    <Marquee reverse pauseOnHover className="[--duration:30s]">
                         {secondRow.map((review) => (
                             <ReviewCard key={review.id} {...review} />
                         ))}

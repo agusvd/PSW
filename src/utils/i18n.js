@@ -10,6 +10,8 @@ const resources = {
             "nosotros": "About us",
             "contacto": "Contact",
             "catalogo": "Catalog",
+            "español": "Spanish",
+            "ingles": "English",
             "hero1": "From the depths of Magallanes to the world, offering the best products of quality.",
         }
     },
@@ -20,6 +22,8 @@ const resources = {
             "nosotros": "Nosotros",
             "contacto": "Contacto",
             "catalogo": "Catalogo",
+            "español": "Español",
+            "ingles": "Ingles",
             "hero1": "Desde las profundidades de Magallanes al mundo ofreciendo los mejores productos y de calidad",
         }
     }

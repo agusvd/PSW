@@ -61,7 +61,7 @@ export default function Contact() {
                     </form>
                 </motion.div>
                 {/* Imagen animada */}
-                <motion.div initial={{ opacity: 0, x: 100 }} animate={controlsImage} className="w-full md:w-1/2 h-screen overflow-hidden flex justify-center items-center">
+                <motion.div initial={{ opacity: 0, x: 100 }} animate={controlsImage} className="w-full md:w-1/2 overflow-hidden flex justify-center items-center">
                     <img className="rounded-xl h-full w-full object-cover" src="https://images.unsplash.com/photo-1574781330855-d0db8cc6a79c?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Background" />
                     <div className="absolute top-4 left-4 z-20">
                         <motion.img src={logo} className="h-16" alt="Logo" whileHover={{ scale: 1.2, rotate: 360 }} transition={{ duration: 1 }} />
