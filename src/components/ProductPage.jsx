@@ -4,7 +4,6 @@ import { Badge } from '@/components/ui/badge';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import NavTop from '../components/NavTop';
 import Footer from '../pages/Footer';
-import NavDock from '../components/NavDock';
 import { motion } from 'framer-motion';
 
 const ProductPage = ({ productName, scientificName, productDescription, howItsObtained, plantProcesses, exportMarkets, benefits, imageGallery }) => {
