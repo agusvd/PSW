@@ -1,8 +1,11 @@
+import { useTranslation } from "react-i18next";
 
 export default function Certifications() {
+    const { t } = useTranslation();
+
     const certifications = [
-        { name: "ISO 9001", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/ISO_9001-2015.svg/2240px-ISO_9001-2015.svg.png", description: "Gestión de calidad" },
-        { name: "HACCP", img: "https://www.adhesivos-orcajada.es/wp-content/uploads/2022/03/Sistema-HAPPCC.jpg", description: "Control de peligros y puntos críticos" },
+        { name: "ISO 9001", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/ISO_9001-2015.svg/2240px-ISO_9001-2015.svg.png", description: t('cert1') },
+        { name: "HACCP", img: "https://www.adhesivos-orcajada.es/wp-content/uploads/2022/03/Sistema-HAPPCC.jpg", description: t('cert2') },
     ]
 
     return (

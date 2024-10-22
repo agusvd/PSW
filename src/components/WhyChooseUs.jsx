@@ -1,16 +1,19 @@
+import { useTranslation } from "react-i18next";
+
 export default function WhyChooseUs() {
+    const { t } = useTranslation();
     const features = [
-        "Productos certificados internacionalmente",
-        "Relaciones directas con industrias pesqueras",
-        "Experiencia en grandes transacciones comerciales",
-        "Cumplimos con los más altos estándares de calidad",
-        "Enfocados en la sostenibilidad",
-        "Con más de 15 años de experiencia",
+        t('why1'),
+        t('why2'),
+        t('why3'),
+        t('why4'),
+        t('why5'),
+        t('why6'),
     ];
 
     return (
         <div className="font-primary py-12">
-            <h2 className="text-4xl font-bold text-[#134B70] text-center mb-6">¿Por qué elegirnos?</h2>
+            <h2 className="text-4xl font-bold text-[#134B70] text-center mb-6">{t('why')}</h2>
             <div className="flex justify-center gap-8 flex-wrap">
                 {features.map((feature, index) => (
                     <div key={index}

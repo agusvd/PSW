@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useTranslation } from "react-i18next";
 
 export default function About() {
+    const { t } = useTranslation()
     const controlsText = useAnimation();
     const controlsImage = useAnimation();
     const { ref, inView } = useInView({ threshold: 0.2 });
@@ -37,10 +39,7 @@ export default function About() {
                             Patagonia South West Eirl
                         </h2>
                         <p className="text-lg text-[#508C9B] font-primary">
-                            Comercial Patagonia South West Eirl se dedica a la elaboración,
-                            comercialización y exportación de productos del mar desde la
-                            región de Magallanes. Fundada en 2008 en Punta Arenas por Rodrigo
-                            Castillo Mansilla, quien ha trabajado en la industria desde 1999.
+                            {t('about1')}
                         </p>
                     </motion.div>
                     <motion.div
@@ -65,13 +64,10 @@ export default function About() {
                         animate={controlsText}
                     >
                         <h2 className="text-4xl md:text-5xl font-bold mb-4 font-secondary">
-                            Objetivo
+                            {t('about2')}
                         </h2>
                         <p className="text-lg text-[#508C9B] font-primary">
-                            Nos enfocamos en elaborar productos de alta calidad para mercados
-                            en Europa, Estados Unidos, Japón, Corea del Sur y China,
-                            garantizando certificaciones y supervisando cada etapa del proceso
-                            en las plantas pesqueras de Magallanes.
+                            {t('about3')}
                         </p>
                     </motion.div>
                     <motion.div
