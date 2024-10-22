@@ -24,7 +24,7 @@ export default function Catalog() {
             name: t('product3'),
             image: "https://cooperativa.cl/noticias/site/artic/20171015/imag/foto_0000000120171015094224.jpg",
             description: t('desc3'),
-            url: 'centolla'
+            url: 'erizos-de-mar'
         },
         {
             id: 4,
@@ -38,14 +38,14 @@ export default function Catalog() {
             name: t('product5'),
             image: "https://www.subpesca.cl/portal/617/articles-94134_galeria_00.jpg",
             description: t('desc5'),
-            url: 'centolla'
+            url: 'huepo'
         },
         {
             id: 6,
             name: t('product6'),
             image: "https://www.emdepes.cl/wp-content/uploads/2017/12/congrioWeb.jpg",
             description: t('desc6'),
-            url: 'centolla'
+            url: 'congrio'
         },
         {
             id: 7,

@@ -8,6 +8,7 @@ import PageAbout from "./pages/PageAbout"
 import PageCentollon from "./pages/PageCentollon"
 import PageMerluzaA from "./pages/PageMerluzaA"
 import PageOstion from "./pages/PageOstion"
+import PageHuepo from "./pages/PageHuepo"
 
 export default function App() {
 
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/centolla" element={<PageCentolla/>}/>
         <Route path="/centollon" element={<PageCentollon/>}/>
         <Route path="/merluza-austral" element={<PageMerluzaA/>}/>
+        <Route path="/huepo" element={<PageHuepo/>}/>
         <Route path="/ostion" element={<PageOstion/>}/>
         <Route path="/404" element={<Error />} />
         <Route path="*" element={<Navigate to="/404" />} />

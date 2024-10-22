@@ -1,19 +1,19 @@
 import React from 'react';
 import ProductPage from '../components/ProductPage';
 
-const PageMerluzaA = () => {
-    const productName = "Merluza Austral";
-    const scientificName = "Merluccius australis";
+const PageHuepo = () => {
+    const productName = "Huepo";
+    const scientificName = "Ensis macha";
     const productDescription = "Pescada en los mares y canales australes de la región de Magallanes, esta merluza es valorada por su carne blanca y suave, ideal para una variedad de preparaciones.";
-    const howItsObtained = "Se pesca en los mares y canales australes de la región de Magallanes, Patagonia Austral.";
+    const howItsObtained = "Arte de pesca buceo, en bancos naturales de las costas del Estrecho de Magallanes, entre otros sectores de la región de Magallanes Patagonia Austral.";
     const plantProcesses = [
-        { title: "Recepción", description: "Se revisa exhaustivamente la t° y las condiciones organolépticas para garantizar la frescura del producto." },
-        { title: "Proceso", description: "Lavado y descamado para presentación en filete con piel y HGT. Congelación I.Q.F." },
-        { title: "Presentación", description: "Filetes con piel y sin piel, así como HGT, dependiendo de las especificaciones del cliente." },
-        { title: "Clasificación", description: "Los filetes son clasificados por peso, en gramos o libras, según solicitud del cliente." },
-        { title: "Empaque", description: "Se empaca IWP, en cajas de cartón de 10 kg o 20 lbs, asegurando el mantenimiento adecuado de la temperatura." }
+        { title: "Recepción", description: "Verificación exhaustiva de ingreso vivos a línea de proceso" },
+        { title: "Proceso", description: "Cocción al vapor. Enfriado y lavado" },
+        { title: "Presentación", description: "cocido congelado, fresco enfriado" },
+        { title: "Clasificación", description: "De acuerdo con las exigencias del cliente" },
+        { title: "Empaque", description: "Envases de 1Kg / 2lb; 5Kg / 10lb Cajas de 10kg / 10lb" }
     ];
-    const exportMarkets = "Mercados, EE.UU. – Brasil..";
+    const exportMarkets = "Mercados de USA – Brasil – Asia.";
     const benefits = [
         { title: "Alto valor nutritivo", description: "Fuente rica en proteínas y ácidos grasos omega-3, ideal para una dieta saludable.", icon: "/iconos/nutritivo.svg" },
         { title: "Pesca sostenible", description: "Se realiza bajo estrictas normativas que aseguran la sostenibilidad de las poblaciones marinas.", icon: "/iconos/sostenible.svg" },
@@ -39,4 +39,4 @@ const PageMerluzaA = () => {
     );
 }
 
-export default PageMerluzaA;
+export default PageHuepo;
