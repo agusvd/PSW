@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 
 const ProductPage = ({ productName, scientificName, productDescription, howItsObtained, plantProcesses, exportMarkets, benefits, imageGallery }) => {
     return (
-        <div>
+        <div className='font-primary'>
             <NavTop />
 
             {/* Header */}
@@ -60,7 +60,7 @@ const ProductPage = ({ productName, scientificName, productDescription, howItsOb
                         <TooltipProvider>
                             <Tooltip>
                                 <TooltipTrigger>
-                                    <Badge className="bg-blue-600 text-white ml-2 cursor-pointer">Mercados Internacionales</Badge>
+                                    <Badge className="bg-[#134B70] text-white ml-2 cursor-pointer">Mercados Internacionales</Badge>
                                 </TooltipTrigger>
                                 <TooltipContent>
                                     <p>Mercados disponibles: EE.UU., UE, Asia</p>

@@ -3,60 +3,6 @@ import { cn } from "@/lib/utils";
 import Marquee from "./ui/marquee";
 import { useTranslation } from "react-i18next";
 
-// Productos
-const reviews = [
-    {
-        id: 1,
-        name: "Centolla",
-        image: "https://www.subpesca.cl/portal/616/articles-811_foto.jpg",
-        url: 'centolla'
-    },
-    {
-        id: 2,
-        name: "Centollón",
-        image: "https://www.subpesca.cl/portal/616/articles-812_foto.jpg",
-        url: 'centolla'
-    },
-    {
-        id: 3,
-        name: "Erizo de mar",
-        image: "https://cooperativa.cl/noticias/site/artic/20171015/imag/foto_0000000120171015094224.jpg",
-        url: 'centolla'
-    },
-    {
-        id: 4,
-        name: "Ostión del Sur",
-        image: "https://www.aqua.cl/wp-content/uploads/2022/02/Ostiones-2-Cr%C3%A9dito-Instituto-Milenio-SECOS-scaled.jpg",
-        url: 'centolla'
-    },
-    {
-        id: 5,
-        name: "Huepo",
-        image: "https://www.subpesca.cl/portal/617/articles-94134_galeria_00.jpg",
-        url: 'centolla'
-    },
-    {
-        id: 6,
-        name: "Congrio",
-        image: "https://www.emdepes.cl/wp-content/uploads/2017/12/congrioWeb.jpg",
-        url: 'centolla'
-    },
-    {
-        id: 7,
-        name: "Merluza Austral",
-        image: "https://puromar.cl/wp-content/uploads/2024/09/merluza-asustral-venta-pescados-mariscos-concepcion-chiguayante-talcahuano-san-pedro-puromar.jpg",
-        url: 'centolla'
-    }
-];
-
-// Función para mezclar los elementos del array de forma aleatoria
-const shuffleArray = (array) => {
-    return array.sort(() => Math.random() - 0.5);
-};
-
-// Mezcla los productos de forma aleatoria antes de asignarlos a las filas
-const firstRow = shuffleArray(reviews.slice());
-const secondRow = shuffleArray(reviews.slice());
 
 const ReviewCard = ({
     url,
@@ -76,7 +22,62 @@ const ReviewCard = ({
 };
 
 export default function HeroStart() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
+    // Productos
+    const reviews = [
+        {
+            id: 1,
+            name: t('product1'),
+            image: "https://www.subpesca.cl/portal/616/articles-811_foto.jpg",
+            url: 'centolla'
+        },
+        {
+            id: 2,
+            name: t('product2'),
+            image: "https://www.subpesca.cl/portal/616/articles-812_foto.jpg",
+            url: 'centolla'
+        },
+        {
+            id: 3,
+            name: t('product3'),
+            image: "https://cooperativa.cl/noticias/site/artic/20171015/imag/foto_0000000120171015094224.jpg",
+            url: 'centolla'
+        },
+        {
+            id: 4,
+            name: t('product4'),
+            image: "https://www.aqua.cl/wp-content/uploads/2022/02/Ostiones-2-Cr%C3%A9dito-Instituto-Milenio-SECOS-scaled.jpg",
+            url: 'centolla'
+        },
+        {
+            id: 5,
+            name: t('product5'),
+            image: "https://www.subpesca.cl/portal/617/articles-94134_galeria_00.jpg",
+            url: 'centolla'
+        },
+        {
+            id: 6,
+            name: t('product6'),
+            image: "https://www.emdepes.cl/wp-content/uploads/2017/12/congrioWeb.jpg",
+            url: 'centolla'
+        },
+        {
+            id: 7,
+            name: t('product7'),
+            image: "https://puromar.cl/wp-content/uploads/2024/09/merluza-asustral-venta-pescados-mariscos-concepcion-chiguayante-talcahuano-san-pedro-puromar.jpg",
+            url: 'centolla'
+        }
+    ];
+
+
+    // Función para mezclar los elementos del array de forma aleatoria
+    const shuffleArray = (array) => {
+        return array.sort(() => Math.random() - 0.5);
+    };
+
+    // Mezcla los productos de forma aleatoria antes de asignarlos a las filas
+    const firstRow = shuffleArray(reviews.slice());
+    const secondRow = shuffleArray(reviews.slice());
 
     return (
         <section id="home" className="flex flex-col gap-2 justify-center items-center pb-10">
