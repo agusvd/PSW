@@ -5,12 +5,18 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import NavTop from '../components/NavTop';
 import Footer from '../pages/Footer';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, } from "../components/ui/carousel"
 
 const ProductPage = ({ productName, scientificName, productDescription, howItsObtained, plantProcesses, exportMarkets, benefits, imageGallery }) => {
     return (
         <div className='font-primary'>
             <NavTop />
-
+            <div className='z-50 fixed bottom-0 right-0 p-4'>
+                <Link to='/'>
+                    Volver
+                </Link>
+            </div>
             {/* Header */}
             <section className="container mx-auto p-6 mt-10 text-center">
                 <h1 className="text-5xl font-bold text-[#134B70]">{productName}</h1>
@@ -91,17 +97,27 @@ const ProductPage = ({ productName, scientificName, productDescription, howItsOb
 
             {/* Image Gallery */}
             <section className="container mx-auto p-6 mt-10">
-                <h2 className="text-3xl font-bold text-[#134B70] text-center mb-6">Galería de Imágenes</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {imageGallery.map((image, index) => (
-                        <img
-                            key={index}
-                            src={image}
-                            alt={`${productName} image ${index + 1}`}
-                            className="rounded-lg shadow-lg w-full h-64 object-cover"
-                        />
-                    ))}
-                </div>
+                <Carousel className="w-full max-w-sm">
+                    <CarouselContent className="-ml-1">
+                        {imageGallery.map((image, index) => (
+                            <CarouselItem key={index} className="">
+                                <div className="p-1">
+                                    <Card>
+                                        <CardContent className="flex aspect-square items-center justify-center p-6">
+                                            <img
+                                                src={image}
+                                                alt={`Imagen ${index + 1}`}
+                                                className="object-cover w-full h-full rounded-md"
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                </div>
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                </Carousel>
             </section>
 
             <Footer />

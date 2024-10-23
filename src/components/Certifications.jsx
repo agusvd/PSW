@@ -4,7 +4,7 @@ export default function Certifications() {
     const { t } = useTranslation();
 
     const certifications = [
-        { name: "ISO 9001", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/ISO_9001-2015.svg/2240px-ISO_9001-2015.svg.png", description: t('cert1') },
+        { name: "FDA", img: "https://media.istockphoto.com/id/1250459233/vector/u-s-food-and-drug-administration-fda-approved-vector-stamp.jpg?s=612x612&w=0&k=20&c=NE575hUtucKM5zmP7dM0eId7UWmbssOrM0nCGnq9z18=", description: t('cert1') },
         { name: "HACCP", img: "https://www.adhesivos-orcajada.es/wp-content/uploads/2022/03/Sistema-HAPPCC.jpg", description: t('cert2') },
     ]
 

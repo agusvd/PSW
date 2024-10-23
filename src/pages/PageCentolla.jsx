@@ -5,13 +5,13 @@ const PageCentolla = () => {
     const productName = "Centolla de Magallanes";
     const scientificName = "Lithodes santolla";
     const productDescription = "Una joya gastronómica del extremo sur de Chile, conocida por su delicada y exquisita carne, ideal para platos gourmet.";
-    const howItsObtained = "La centolla se captura en las costas de la región de Magallanes usando trampas especializadas que permiten una pesca sostenible.";
+    const howItsObtained = "La centolla se captura en canales y fiordos de la región de Magallanes usando trampas especializadas que permiten una pesca sostenible.";
     
     const plantProcesses = [
         { title: "Recepción", description: "Las centollas capturadas son transportadas y revisadas para asegurar su frescura." },
         { title: "Clasificación", description: "Se clasifican según tamaño y calidad." },
         { title: "Procesamiento", description: "Dependiendo del destino, pueden procesarse como centolla entera, patas/pinzas o carne de centolla." },
-        { title: "Congelación", description: "Las centollas son congeladas rápidamente para mantener su frescura." },
+        { title: "Congelación", description: "Las centollas son congeladas (IQF) rápidamente para mantener su frescura y obtener un producto de calidad." },
         { title: "Empaque", description: "Se empaquetan bajo condiciones controladas para su exportación." }
     ];
 
