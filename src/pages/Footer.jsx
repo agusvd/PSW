@@ -43,10 +43,10 @@ const Footer = () => {
                 <div className="border-t border-gray-300 mt-6 pt-4">
                     <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
                         <p className="text-sm text-black font-semibold text-center">
-                            &copy; 2024
-                            <Link to="/" className="text-[#134B70] hover:text-white ml-1">
+                            &copy; 2024 Dev by
+                            <a href="http://www.github.com/agusvd" target='_blank' className="text-[#134B70] hover:text-white ml-1">
                                 Agustin Villarroel
-                            </Link>
+                            </a>
                         </p>
                     </div>
                 </div>
