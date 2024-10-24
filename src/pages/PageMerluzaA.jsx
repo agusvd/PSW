@@ -2,6 +2,7 @@ import React from 'react';
 import ProductPage from '../components/ProductPage';
 
 const PageMerluzaA = () => {
+    const idName = "southern-hake"
     const productName = "Merluza Austral";
     const scientificName = "Merluccius australis";
     const productDescription = "Pescada en los mares y canales australes de la región de Magallanes, esta merluza es valorada por su carne blanca y suave, ideal para una variedad de preparaciones.";
@@ -27,6 +28,7 @@ const PageMerluzaA = () => {
 
     return (
         <ProductPage
+            idName={idName}
             productName={productName}
             scientificName={scientificName}
             productDescription={productDescription}

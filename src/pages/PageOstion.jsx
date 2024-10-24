@@ -2,7 +2,8 @@ import React from 'react';
 import ProductPage from '../components/ProductPage';
 
 const PageOstion = () => {
-    const productName = "Ostión";
+    const idName = "southern-scallop"
+    const productName = "Ostión del sur";
     const scientificName = "Argopecten purpuratus";
     const productDescription = "El ostión es un producto de alta calidad, extraído en los fiordos con ventisqueros de la Patagonia Chilena, conocido por su sabor delicado y su textura firme.";
     const howItsObtained = "Se extrae en los fiordos con ventisqueros de la Patagonia Chilena, garantizando un ambiente natural y limpio.";
@@ -27,6 +28,7 @@ const PageOstion = () => {
 
     return (
         <ProductPage
+            idName={idName}
             productName={productName}
             scientificName={scientificName}
             productDescription={productDescription}

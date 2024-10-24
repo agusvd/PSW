@@ -2,8 +2,7 @@ import React from 'react';
 import ProductPage from '../components/ProductPage';
 
 const PageCentollon = () => {
-
-    // Definir los datos del producto Centollón
+    const idName = "southern-king-crab"
     const productName = "Centollón";
     const productDescription = "El centollón es un crustáceo capturado en los fiordos y canales de la región de Magallanes, Patagonia Austral. Es reconocido por su calidad y sabor únicos.";
     const scientificName = "Paralomis granulosa";
@@ -32,8 +31,9 @@ const PageCentollon = () => {
 
     return (
         <ProductPage
+            idName={idName}
             productName={productName}
-            scientificName={scientificName}  // Asegúrate de agregar este nuevo prop
+            scientificName={scientificName}
             productDescription={productDescription}
             howItsObtained={howItsObtained}
             plantProcesses={plantProcesses}

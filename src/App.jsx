@@ -9,6 +9,8 @@ import PageCentollon from "./pages/PageCentollon"
 import PageMerluzaA from "./pages/PageMerluzaA"
 import PageOstion from "./pages/PageOstion"
 import PageHuepo from "./pages/PageHuepo"
+import PageErizo from "./pages/PageErizo"
+import PageCongrio from "./pages/PageCongrio"
 
 export default function App() {
 
@@ -19,11 +21,13 @@ export default function App() {
         <Route path="/catalog" element={<PageCatalog/>} />
         <Route path="/contact" element={<PageContact/>} />
         <Route path="/about" element={<PageAbout/>}/>
-        <Route path="/centolla" element={<PageCentolla/>}/>
-        <Route path="/centollon" element={<PageCentollon/>}/>
-        <Route path="/merluza-austral" element={<PageMerluzaA/>}/>
-        <Route path="/huepo" element={<PageHuepo/>}/>
-        <Route path="/ostion" element={<PageOstion/>}/>
+        <Route path="/king-crab" element={<PageCentolla/>}/>
+        <Route path="/southern-king-crab" element={<PageCentollon/>}/>
+        <Route path="/sea-urchins" element={<PageErizo/>}/>
+        <Route path="/southern-scallop" element={<PageOstion/>}/>
+        <Route path="/razor-clam" element={<PageHuepo/>}/>
+        <Route path="/conger-eel" element={<PageCongrio/>}/>
+        <Route path="/southern-hake" element={<PageMerluzaA/>}/>
         <Route path="/404" element={<Error />} />
         <Route path="*" element={<Navigate to="/404" />} />
       </Routes>

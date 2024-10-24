@@ -29,43 +29,43 @@ export default function HeroStart() {
             id: 1,
             name: t('product1'),
             image: "https://www.subpesca.cl/portal/616/articles-811_foto.jpg",
-            url: 'centolla'
+            url: 'king-crab'
         },
         {
             id: 2,
             name: t('product2'),
             image: "https://www.subpesca.cl/portal/616/articles-812_foto.jpg",
-            url: 'centollon'
+            url: 'southern-king-crab'
         },
         {
             id: 3,
             name: t('product3'),
             image: "https://cooperativa.cl/noticias/site/artic/20171015/imag/foto_0000000120171015094224.jpg",
-            url: 'erizos-de-mar'
+            url: 'sea-urchins'
         },
         {
             id: 4,
             name: t('product4'),
             image: "https://www.aqua.cl/wp-content/uploads/2022/02/Ostiones-2-Cr%C3%A9dito-Instituto-Milenio-SECOS-scaled.jpg",
-            url: 'ostion'
+            url: 'southern-scallop'
         },
         {
             id: 5,
             name: t('product5'),
             image: "https://www.subpesca.cl/portal/617/articles-94134_galeria_00.jpg",
-            url: 'huepo'
+            url: 'razor-clam'
         },
         {
             id: 6,
             name: t('product6'),
             image: "https://www.emdepes.cl/wp-content/uploads/2017/12/congrioWeb.jpg",
-            url: 'congrio'
+            url: 'conger-eel'
         },
         {
             id: 7,
             name: t('product7'),
             image: "https://puromar.cl/wp-content/uploads/2024/09/merluza-asustral-venta-pescados-mariscos-concepcion-chiguayante-talcahuano-san-pedro-puromar.jpg",
-            url: 'merluza-austral'
+            url: 'southern-hake'
         }
     ];
 

@@ -2,6 +2,7 @@ import React from 'react';
 import ProductPage from '../components/ProductPage';
 
 const PageCentolla = () => {
+    const idName = "king-crab"
     const productName = "Centolla de Magallanes";
     const scientificName = "Lithodes santolla";
     const productDescription = "Una joya gastronómica del extremo sur de Chile, conocida por su delicada y exquisita carne, ideal para platos gourmet.";
@@ -32,6 +33,7 @@ const PageCentolla = () => {
 
     return (
         <ProductPage
+            idName={idName}
             productName={productName}
             scientificName={scientificName}
             productDescription={productDescription}

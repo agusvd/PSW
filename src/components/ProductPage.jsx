@@ -8,9 +8,9 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, } from "../components/ui/carousel"
 
-const ProductPage = ({ productName, scientificName, productDescription, howItsObtained, plantProcesses, exportMarkets, benefits, imageGallery }) => {
+const ProductPage = ({ idName, productName, scientificName, productDescription, howItsObtained, plantProcesses, exportMarkets, benefits, imageGallery }) => {
     return (
-        <div className='font-primary'>
+        <section id={idName} className='font-primary'>
             <NavTop />
             <div className='z-50 fixed bottom-0 right-0 p-4'>
                 <Link to='/'>
@@ -100,7 +100,7 @@ const ProductPage = ({ productName, scientificName, productDescription, howItsOb
                 <Carousel className="w-full max-w-sm">
                     <CarouselContent className="-ml-1">
                         {imageGallery.map((image, index) => (
-                            <CarouselItem key={index} className="">
+                            <CarouselItem key={index} className="b">
                                 <div className="p-1">
                                     <Card>
                                         <CardContent className="flex aspect-square items-center justify-center p-6">
@@ -121,7 +121,7 @@ const ProductPage = ({ productName, scientificName, productDescription, howItsOb
             </section>
 
             <Footer />
-        </div>
+        </section>
     );
 };
 

@@ -10,7 +10,7 @@ export default function Certifications() {
 
     return (
         <div className="py-12">
-            <h2 className="text-4xl font-bold text-center mb-8 text-[#134B70]">Certificaciones</h2>
+            <h2 className="text-4xl font-bold text-center mb-8 text-[#134B70]">{t('certh2')}</h2>
             <div className="flex flex-wrap justify-center gap-8">
                 {certifications.map((cert, index) => (
                     <div
